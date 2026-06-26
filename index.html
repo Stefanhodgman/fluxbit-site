@@ -82,13 +82,13 @@ body{margin:0;min-height:100svh;background:#06080a;color:#c7cfd6;font:16px/1.6 '
   <div class="status"><i></i> Coming soon &nbsp;&middot;&nbsp; <b>Invite-only beta</b></div>
   <div class="term">
     <div class="term-bar"><i></i> wire your agent</div>
-    <pre><span class="p">$</span> <span class="fl">claude mcp add fluxbit</span> \
-    --env FLUXBIT_URL=<span class="tok">https://fluxbit.app</span> \
-    --env FLUXBIT_TOKEN=<span class="tok">fluxbit_&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;</span> \
-    -- uvx fluxbit-mcp</pre>
+    <pre><span class="p">$</span> <span class="fl">claude mcp add --transport http fluxbit</span> \
+    <span class="tok">https://mcp.fluxbit.app/mcp</span>
+<span class="p">#</span> sign in once &mdash; OAuth, no API key to paste</pre>
   </div>
   <div class="cta-row">
     <a class="btn btn-pri" href="mailto:hello@fluxbit.app?subject=FluxBit%20early%20access">Request early access</a>
+    <a class="btn btn-ghost" href="https://app.fluxbit.app">Sign in</a>
   </div>
   <div class="trust"><b>Bring your own agent</b> &nbsp;&middot;&nbsp; Keyless &nbsp;&middot;&nbsp; Your assets stay yours</div>
 </header>
