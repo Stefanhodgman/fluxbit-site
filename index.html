@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FluxBit — coming soon</title>
+<meta name="description" content="FluxBit is an agent-native game-art studio. Generate concept art, 3D and audio for your game, driven by your own AI agent. Coming soon.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="FluxBit — agent-native game-art studio">
+<meta property="og:description" content="Generate concept art, 3D and audio for your game, driven by your own AI agent. Coming soon.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fluxbit.app">
+<style>
+  :root{
+    --bg:#06060e; --panel:#100b18; --ink:#ece7f5; --mut:#9b93b4;
+    --neon:#ff2db5; --neon2:#8a3dff; --line:rgba(255,255,255,.08);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+    display:grid; place-items:center; min-height:100svh;
+  }
+  /* drifting neon aura */
+  .aura{position:fixed; inset:-20vmax; z-index:0; pointer-events:none; filter:blur(80px); opacity:.55}
+  .aura b{position:absolute; width:46vmax; height:46vmax; border-radius:50%; mix-blend-mode:screen; animation:float 18s ease-in-out infinite}
+  .aura b:nth-child(1){background:radial-gradient(circle,#ff2db5,transparent 60%); top:8%; left:12%}
+  .aura b:nth-child(2){background:radial-gradient(circle,#8a3dff,transparent 60%); bottom:6%; right:10%; animation-delay:-6s}
+  .aura b:nth-child(3){background:radial-gradient(circle,#3d7bff,transparent 60%); top:40%; left:48%; animation-delay:-12s}
+  @keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(4vmax,-3vmax) scale(1.12)}}
+  main{position:relative; z-index:1; width:min(680px,92vw); text-align:center; padding:48px 0}
+  .mark{
+    display:inline-grid; place-items:center; width:84px; height:84px; margin:0 auto 26px;
+    border-radius:22px; background:linear-gradient(150deg,#1a1230,#0c0918);
+    border:1px solid var(--line); box-shadow:0 0 0 1px rgba(255,45,181,.18),0 24px 60px rgba(138,61,255,.28);
+    font-weight:800; font-size:42px; letter-spacing:-2px;
+    background-clip:padding-box;
+  }
+  .mark span{background:linear-gradient(120deg,var(--neon),var(--neon2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+  .kicker{font-size:12px; letter-spacing:.32em; text-transform:uppercase; color:var(--neon); font-weight:700; margin:0 0 14px}
+  h1{font-size:clamp(34px,7vw,60px); line-height:1.05; margin:0 0 18px; letter-spacing:-1.5px; font-weight:800}
+  h1 em{font-style:normal; background:linear-gradient(120deg,var(--neon),var(--neon2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+  p.lead{font-size:clamp(16px,2.4vw,19px); color:var(--mut); margin:0 auto 34px; max-width:36ch}
+  .pill{display:inline-flex; align-items:center; gap:9px; padding:9px 16px; border:1px solid var(--line); border-radius:999px; color:var(--mut); font-size:13px; background:rgba(255,255,255,.02)}
+  .dot{width:8px; height:8px; border-radius:50%; background:var(--neon); box-shadow:0 0 10px var(--neon); animation:pulse 2.2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+  .feat{display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin:30px 0 36px}
+  .feat span{font-size:13px; color:var(--ink); padding:7px 13px; border:1px solid var(--line); border-radius:10px; background:var(--panel)}
+  .cta{display:inline-block; margin-top:6px; padding:13px 24px; border-radius:12px; font-weight:700; text-decoration:none; color:#0a0612;
+       background:linear-gradient(120deg,var(--neon),var(--neon2)); box-shadow:0 14px 40px rgba(255,45,181,.32); transition:transform .15s ease, box-shadow .15s ease}
+  .cta:hover{transform:translateY(-2px); box-shadow:0 20px 52px rgba(138,61,255,.42)}
+  footer{margin-top:40px; color:#6b6486; font-size:12px}
+  footer a{color:#9b93b4; text-decoration:none}
+  @media (prefers-reduced-motion:reduce){.aura b,.dot{animation:none}}
+</style>
+</head>
+<body>
+  <div class="aura" aria-hidden="true"><b></b><b></b><b></b></div>
+  <main>
+    <div class="mark"><span>F</span></div>
+    <p class="kicker">Coming soon</p>
+    <h1>The <em>agent-native</em> game-art studio.</h1>
+    <p class="lead">Generate concept art, 3D models and audio for your game — driven by your own AI agent. FluxBit is the hands; your agent is the brain.</p>
+    <div class="feat">
+      <span>Concept art · FLUX</span>
+      <span>3D · Tripo / TRELLIS</span>
+      <span>Audio &amp; VO</span>
+      <span>Connect over MCP</span>
+    </div>
+    <div><span class="pill"><span class="dot"></span> Building now — early access opening soon</span></div>
+    <p style="margin-top:28px"><a class="cta" href="mailto:hello@fluxbit.app?subject=FluxBit%20early%20access">Request early access</a></p>
+    <footer>&copy; FluxBit · <a href="https://fluxbit.app">fluxbit.app</a></footer>
+  </main>
+</body>
+</html>
